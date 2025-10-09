@@ -1,0 +1,9 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    background-image: url('../web/img/BG.jpg');
+    background-attachment: fixed;
+    background-size: cover; /* หรือ background-size: 100% 100%; */
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}

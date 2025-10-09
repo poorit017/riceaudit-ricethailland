@@ -1,0 +1,56 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    background-image: url('../web/img/BG.jpg');
+    background-attachment: fixed;
+    background-size: cover; /* หรือ background-size: 100% 100%; */
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    /* margin: 10px 20px; */
+    /* กำหนดระยะห่าง 10px ด้านบน-ล่าง และ 20px ด้านซ้าย-ขวา */
+}
+
+.card {
+    padding: 5px 10px 15px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #000;
+    /* กำหนดระยะห่าง ด้านบน 5px, ด้านขวา 10px, ด้านล่าง 15px, และ ด้านซ้าย 20px */
+}
+
+
+/* สไตล์ใหม่สำหรับเคลื่อนไหวบนอุปกรณ์มือถือ */
+@media (max-width: 768px) {
+    .row.my-2 {
+        flex-direction: column;
+        /* เปลี่ยนทิศทางเป็นการเรียงแนวตั้ง */
+    }
+
+    .col-md-6 {
+        width: 100%;
+        /* ให้ใช้ขนาดเต็มของคอลัมน์ */
+    }
+
+    .card {
+        margin: 10px 0;
+        /* ปรับขอบระหว่างการเรียงการ์ดแนวตั้ง */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .container {
+        margin-left: 0;
+        /* เอา margin-left ออกเพื่อให้เต็มของหน้าจอ */
+    }
+
+    .card {
+        margin: 1rem;
+        /* ปรับระยะห่างของ card ทั้งด้าน 1rem */
+    }
+}

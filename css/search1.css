@@ -1,0 +1,56 @@
+body {
+  font-family: 'Kanit', sans-serif;
+  background-image: url('../web/img/BG.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.table-container {
+  max-height: 500px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.tableFixHead thead tr th {
+  position: sticky;
+  top: 0;
+  background-color: #0044ff;
+  color: #fff;
+  z-index: 2;
+  border-bottom: 2px solid black;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f8f9fa;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background-color: #d0e6ff;
+  cursor: pointer;
+}

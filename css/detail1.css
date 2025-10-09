@@ -1,0 +1,65 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    background-image: url('../web/img/BG.jpg');
+    background-attachment: fixed;
+    background-size: cover; /* หรือ background-size: 100% 100%; */
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+ }
+
+ .container-fluid {
+    padding: 0;
+ }
+
+ .table-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .table-container {
+    overflow-x: auto;
+    overflow-y: auto;
+ }
+
+ table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+    background: #eee;
+
+ }
+
+ th,
+ td {
+    padding: 8px;
+    white-space: nowrap;
+    border: 1px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+ }
+
+ .tableFixHead thead th {
+    
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    /* Ensure that the sticky header is above the cells */
+ }
+
+
+ @media (max-width: 768px) {
+    table {
+       margin-left: -2rem;
+       font-size: 13px;
+       /* Adjust font size for small screens */
+    }
+
+    th,
+    td {
+       padding: 6px;
+       /* Adjust cell padding for small screens */
+       position: relative;
+    }
+ }

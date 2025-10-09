@@ -1,0 +1,65 @@
+.container {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 20px;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-image: url('../web/img/BG.jpg');
+    background-attachment: fixed;
+    background-size: cover; /* หรือ background-size: 100% 100%; */
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed; /* Ensure all columns are the same width */
+}
+
+.tableFixHead {
+    overflow-y: auto;
+    height: 600px;
+}
+
+.tableFixHead thead th {
+    position: sticky;
+    top: 0;
+}
+
+th,
+td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+}
+
+th {
+    background: #0055a5;
+    color: white;
+    font-weight: bold;
+}
+
+tr {
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 13px;
+        /* Adjust font size for small screens */
+    }
+
+    th,
+    td {
+        padding: 6px;
+        /* Adjust cell padding for small screens */
+        position: relative;
+    }
+}

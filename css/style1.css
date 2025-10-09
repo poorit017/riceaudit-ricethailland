@@ -1,0 +1,840 @@
+header {
+  width: 100%;
+  background-color: #95e8a9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 150px;
+  position: sticky;
+}
+
+.logo {
+  position: relative;
+
+}
+.section-content{
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background-image: url('../web/img/BG.jpg');
+  background-attachment: fixed;
+  background-size: cover; /* หรือ background-size: 100% 100%; */
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+section .header {
+  margin-bottom: 10px;
+}
+
+.section-header.text-center {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+
+
+.container-fluid {
+  max-width: 100%;
+}
+
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+.about {
+  position: relative;
+  width: 100%;
+}
+
+.about .section-header {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center; /* จัดตำแหน่งข้อความกลางหน้า */
+}
+
+.about .about-img img {
+  width: 100%; /* ทำให้รูปภาพเต็มความกว้างของ container */
+  max-width: 600px; /* จำกัดขนาดสูงสุดของรูปภาพ */
+  height: auto; /* ทำให้รูปภาพปรับสัดส่วน */
+  border-radius: 5px;
+  display: block; /* จัดให้รูปภาพอยู่กลาง */
+  margin: 0 auto; /* จัดให้รูปภาพอยู่กลาง */
+}
+
+.about .about-content {
+  margin-bottom: 30px;
+}
+
+.about .about-content ul {
+  list-style: none; /* ลบ bullet point ของรายการ */
+  padding: 0;
+}
+
+.about .about-content ul li {
+  margin-bottom: 10px;
+}
+
+.about .about-content ul li i {
+  font-size: 20px;
+  color: #E81C2E;
+  margin-right: 10px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+.about .about-content .btn-custom {
+  background-color: #E81C2E;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.nav-bar {
+  display: flex;
+  position: relative;
+  background: #699A7D;
+  z-index: 1000;
+}
+
+.nav-bar.nav-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-bar .navbar {
+  padding: 20px 0;
+  background: #699A7D !important;
+  transition: .3s;
+}
+
+.nav-bar.nav-sticky .navbar {
+  padding: 5px 0;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffffff;
+  padding: 15px;
+  /* font-weight: 50px; */
+  letter-spacing: 1px;
+
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffffff;
+  /* font-size: 20px; */
+  box-shadow: 0 0 10px #013f0f;
+  background: #202C45;
+
+}
+
+.nav-bar .dropdown-menu {
+  margin-top: 0;
+  border: 0;
+  border-radius: 0;
+  background: #f8f9fa;
+}
+
+.nav-bar .dropdown-menu :hover {
+  margin-top: 0;
+  border: 1;
+  border-radius: 0;
+  color: #ffffff;
+  background: #202C45;
+}
+
+
+@media (min-width: 992px) {
+  .nav-bar .navbar-brand {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+
+  .navbar-dark .navbar-nav .nav-link,
+  .navbar-dark .navbar-nav .nav-link:focus,
+  .navbar-dark .navbar-nav .nav-link:hover,
+  .navbar-dark .navbar-nav .nav-link.active {
+    padding: 5px 0;
+
+  }
+
+  .nav-bar .dropdown-menu {
+    box-shadow: none;
+  }
+
+  .nav-bar .btn {
+    display: none;
+  }
+}
+
+
+a {
+  color: #202C45;
+  transition: .3s;
+}
+
+
+
+.btn.btn-custom {
+  padding: 10px 30px 12px 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  background: #ffffff;
+  border: none;
+  border-radius: 60px;
+  box-shadow: inset 0 0 0 0 #2f664b;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+}
+
+.btn.btn-custom:hover {
+  color: #ffffff;
+  background: #2f664b;
+  box-shadow: inset 200px 0 0 0 #2f664b;
+}
+
+.btn:focus,
+.form-control:focus {
+  box-shadow: none;
+}
+
+/*******************************/
+/********** Hero CSS ***********/
+/*******************************/
+.carousel {
+
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  height: 600px;
+  background: #ffffff;
+  margin-bottom: 50px;
+  margin-top: 1rem;
+}
+
+.carousel .container-fluid {
+  padding: 0;
+}
+
+.carousel .carousel-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  object-position: center center;
+  object-fit: cover;
+}
+
+.carousel .carousel-img {
+
+  position: relative;
+  width: 800px;
+  height: 600px;
+  min-height: 400px;
+  text-align: right;
+  overflow: hidden;
+}
+
+.carousel .carousel-img::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+.carousel .carousel-img img {
+  width: 800px;
+  height: 600px;
+  object-fit: cover;
+}
+
+
+
+
+.carousel .btn.btn-custom {
+  padding: 20px 45px 22px 45px;
+  color: #ffffff;
+}
+
+.carousel .btn.btn-custom:hover {
+  color: #E81C2E;
+}
+
+.carousel .owl-nav {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: calc(50% - 25px);
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 9;
+}
+
+.carousel .owl-nav .owl-prev,
+.carousel .owl-nav .owl-next {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border-radius: 50px;
+  background: rgba(256, 256, 256, .2);
+  font-size: 22px;
+  transition: .5s;
+}
+
+.carousel .owl-nav .owl-prev {
+  margin-left: 30px;
+}
+
+.carousel .owl-nav .owl-next {
+  margin-right: 30px;
+}
+
+.carousel .owl-nav .owl-prev:hover,
+.carousel .owl-nav .owl-next:hover {
+  color: #ffffff;
+  background: #E81C2E;
+}
+
+.carousel .animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+
+
+@media (max-width: 991.98px) {
+  .carousel .carousel-text h3 {
+    margin-bottom: 5px;
+  }
+
+  .carousel .carousel-text h1 {
+    font-size: 60px;
+  }
+
+  .carousel .carousel-text p {
+    font-size: 16px;
+  }
+
+  .carousel .carousel-text .btn {
+    padding: 12px 30px;
+    font-size: 15px;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .carousel .carousel-text h3 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+
+  }
+
+  .carousel .carousel-text h1 {
+    font-size: 45px;
+  }
+
+  .carousel .carousel-text .btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .carousel .carousel-text h3 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .carousel .carousel-text h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .carousel .carousel-text p {
+    margin-bottom: 25px;
+  }
+
+  .carousel .carousel-text .btn {
+    padding: 8px 20px;
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+}
+
+
+
+
+
+/*******************************/
+/********* Service CSS *********/
+/*******************************/
+/* .service {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  padding: 45px 0 0 0;
+}
+
+.service .service-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 45px;
+}
+
+.service .service-item i {
+  color: #202C45;
+  font-size: 75px;
+  line-height: 75px;
+  margin-bottom: 20px;
+}
+
+.service .service-item [class^="flaticon-"]::before {
+  margin: 0;
+  font-size: 60px;
+  line-height: 60px;
+  background-image: linear-gradient(#E81C2E, #202C45);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: .5s;
+}
+
+
+.service .service h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+
+}
+
+.service .service-item h3 {
+  margin: 0;
+  margin-bottom: 1rem;
+
+}
+
+.service .service-item p {
+  margin: 0;
+  margin-bottom: 1rem;
+  color: #000000;
+} */
+.service {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  padding: 45px 0 0 0;
+}
+
+.service .service-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  
+  /* กำหนดความสูงขั้นต่ำเท่ากัน */
+  min-height: 300px; 
+  /* หรือปรับเป็นค่าอื่นตามดีไซน์ */
+
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+
+.service .service-item:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+
+.service .service-item i {
+  color: #202C45;
+  font-size: 75px;
+  line-height: 75px;
+  margin-bottom: 20px;
+}
+
+.service .service-item [class^="flaticon-"]::before {
+  margin: 0;
+  font-size: 60px;
+  line-height: 60px;
+  background-image: linear-gradient(#E81C2E, #202C45);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: .5s;
+}
+
+
+.service .service h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+
+}
+
+.service .service-item h3 {
+  margin: 0;
+  margin-bottom: 1rem;
+
+}
+
+.service .service-item p {
+  margin: 0;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+
+/*******************************/
+/*********** Blog CSS **********/
+/*******************************/
+.blog {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  padding: 45px 0 0 0;
+}
+
+.blog .blog-item {
+  margin-bottom: 45px;
+}
+
+.blog .blog-img {
+  position: relative;
+  width: 100%;
+}
+
+.blog .blog-img img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.blog .meta-date {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  bottom: 10%;
+  left: calc(50% - 35px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 70px;
+  background: #202C45;
+  color: #ffffff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.blog .meta-date span {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.blog .meta-date strong {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.blog .blog-item:hover .meta-date {
+  bottom: calc(50% - 35px);
+  opacity: 1;
+}
+
+.blog .blog-text {
+  padding: 10px 0 20px 0;
+}
+
+.blog .blog-text h3 {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center; /* เพิ่มบรรทัดนี้เพื่อจัดกลางเนื้อหา */
+}
+
+
+.blog .blog-text h3 a {
+  color: #202C45;
+}
+
+.blog .blog-text h3 a:hover {
+  color: #E81C2E;
+}
+
+.blog .blog-text p {
+  margin: 0;
+}
+
+.blog .blog-meta {
+  display: flex;
+}
+
+.blog .blog-meta p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 0 10px;
+  border-right: 1px solid rgba(0, 0, 0, .15);
+}
+
+.blog .blog-meta p:first-child {
+  padding-left: 0;
+}
+
+.blog .blog-meta p:last-child {
+  padding-right: 0;
+  border: none;
+}
+
+.blog .blog-meta i {
+  color: #999999;
+  margin-right: 5px;
+}
+
+.blog .blog-meta a {
+  color: #999999;
+}
+
+.blog .blog-meta a:hover {
+  color: #E81C2E;
+}
+
+.blog .pagination {
+  margin-bottom: 15px;
+}
+
+.blog .pagination .page-link {
+  color: #202C45;
+  border-radius: 0;
+  border-color: #202C45;
+}
+
+.blog .pagination .page-link:hover,
+.blog .pagination .page-item.active .page-link {
+  color: #E81C2E;
+  background: #202C45;
+}
+
+.blog .pagination .disabled .page-link {
+  color: #999999;
+}
+@media (max-width: 767.98px) {
+  .blog-text h3 {
+    text-align: center;
+  }
+}
+
+
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+  position: relative;
+  margin-top: 45px;
+  padding-top: 60px;
+  background: #00411b;
+  width: 100%;
+}
+
+.footer .footer-contact,
+.footer .footer-link,
+.footer .footer-newsletter {
+  position: relative;
+  margin-bottom: 45px;
+  color: #ffffff;
+}
+
+.footer .footer-contact h2,
+.footer .footer-link h2,
+.footer .footer-newsletter h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #0066ff;
+}
+
+.footer .footer-link a {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffffff;
+  transition: .3s;
+}
+
+.footer .footer-link a::before {
+  position: relative;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.footer .footer-link a:hover {
+  color: #E81C2E;
+  /* letter-spacing: 1px; */
+}
+
+.footer .footer-contact p i {
+  width: 25px;
+}
+
+.footer .footer-social {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+}
+
+.footer .footer-social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #202C45;
+  background: #ffffff;
+  border-radius: 40px;
+  margin-right: 5px;
+  transition: .5s;
+}
+
+.footer .footer-social a:last-child {
+  margin: 0;
+}
+
+.footer .footer-social a:hover {
+  color: #ffffff;
+  background: #E81C2E;
+}
+
+.footer .footer-newsletter form {
+  position: relative;
+  width: 100%;
+}
+
+.footer .footer-newsletter input {
+  margin-bottom: 15px;
+  height: 45px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+.footer .footer-newsletter label {
+  margin-top: 5px;
+  color: #777777;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.footer .footer-newsletter .btn.btn-custom {
+  width: 100%;
+  color: #c5c5c5;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 0 #E81C2E;
+}
+
+.footer .footer-newsletter .btn:hover {
+  color: #ffffff;
+  background: #E81C2E;
+  box-shadow: inset 200px 0 0 0 #E81C2E;
+}
+
+.footer .copyright {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 45px;
+}
+
+.footer .copyright p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.footer .copyright p a {
+  color: #0066ff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer .copyright p a:hover {
+  color: #ffffff;
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* เพิ่มช่องว่างระหว่างการ์ด */
+}
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card-img-top {
+    width: 100%;
+    height: 200px; /* ขนาดรูปภาพเท่ากัน */
+    object-fit: cover; /* ปรับให้รูปภาพขยายเต็มโดยไม่เสียอัตราส่วน */
+    cursor: pointer; /* ทำให้รู้ว่าสามารถกดได้ */
+}
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* ให้ content ชิด title */
+    padding-bottom: 15px;
+}
+.card-title {
+    margin-bottom: 5px; /* ลดระยะห่างระหว่าง title กับ content */
+}
+.card-text {
+    flex-grow: 1; /* ขยาย content ให้เต็มพื้นที่ */
+}
