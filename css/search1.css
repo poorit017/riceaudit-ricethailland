@@ -7,10 +7,6 @@ body {
   padding: 0;
 }
 
-.text-center {
-  text-align: center;
-}
-
 label {
   font-size: 18px;
   font-weight: bold;
@@ -20,7 +16,6 @@ label {
 .table-container {
   max-height: 500px;
   overflow-y: auto;
-  position: relative;
 }
 
 .tableFixHead thead tr th {
@@ -31,10 +26,8 @@ label {
   z-index: 2;
   border-bottom: 2px solid black;
   white-space: nowrap;
-  text-align: center;
-  vertical-align: middle;
   font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px #533a3a33
 }
 
 .table {
@@ -46,8 +39,6 @@ label {
 th, td {
   padding: 10px;
   border: 1px solid black;
-  text-align: center;
-  vertical-align: middle;
 }
 
 .table tbody tr:hover {

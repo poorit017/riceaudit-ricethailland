@@ -222,6 +222,7 @@
                 </p>
                 <br><i class="fa fa-phone-alt">&nbsp; &nbsp;</i>02-561-21744</p>
                 <p><i class="fa fa-envelope"></i>dric.rcms@gmail.com</p>
+                <a class="footer-link" href="login_admin.php" target="_blank"><i class="fa fa-user-shield"></i> เข้าสู่ระบบผู้ดูแล</a>
               </div>
             </div>
             <div class="col-lg-2 col-md-6">

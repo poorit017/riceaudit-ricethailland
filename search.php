@@ -28,10 +28,10 @@ try {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="css/search1.css" rel="stylesheet">
-</head>
+
 <body>
     <div class="container mt-4">
-        <h2 class="text-center">ค้นหาผู้อบรม</h2>
+        <h2 class="fw-bold mb-4 text-center">ค้นหาผู้อบรม</h2>
         <form method="post" action="">
             <div class="row g-3 align-items-center">
                 <div class="col-md-3">
@@ -107,12 +107,12 @@ try {
                 echo '<div class="table-responsive mt-4">';
                 echo '<div class="table-container tableFixHead">';
                 echo '<table class="table table-bordered table-striped">';
-                echo '<thead class="text-center"><tr><th>ลำดับ</th><th>ชื่อ - นามสกุล</th><th>หลักสูตร</th><th>ปี</th><th>ดูรายระเอียด</th></tr></thead><tbody>';
+                echo '<thead class="text-center"><tr><th>ลำดับ</th><th>ชื่อ - นามสกุล</th><th>หลักสูตร</th><th>ปี</th><th>ดูรายละเอียด</th></tr></thead><tbody>';
                 $count = 1;
                 foreach ($results as $row) {
                     echo '<tr>';
                     echo '<td class="text-center">' . $count . '</td>';
-                    echo '<td>' . htmlspecialchars($row['Member_titlename']) .
+                    echo '<td class="text-start">' . htmlspecialchars($row['Member_titlename']) .
                         htmlspecialchars($row['Member_firstname']) . ' ' .
                         htmlspecialchars($row['Member_lastname']) . '</td>';
                     echo '<td class="text-center">' . htmlspecialchars($row['Member_course']) . '</td>';
@@ -129,4 +129,5 @@ try {
         ?>
     </div>
 </body>
+
 </html>
