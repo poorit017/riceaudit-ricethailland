@@ -121,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <td class="p-3"><?= htmlspecialchars($doc['title']) ?></td>
                                 <td class="p-3"><?= htmlspecialchars($doc['description']) ?></td>
                                 <td class="p-3">
-                                    <a href="<?= htmlspecialchars($doc['file_path']) ?>" target="_blank" class="text-blue-600 hover:underline">
+                                    <a href="<?= htmlspecialchars($doc['file_path']) ?>" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600 text-sm text-center">
                                         ดาวน์โหลด
                                     </a>
                                 </td>
@@ -129,11 +129,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <a href="move_up.php?id=<?= $doc['id'] ?>" class="text-sm text-blue-600">⬆️</a>
                                     <a href="move_down.php?id=<?= $doc['id'] ?>" class="text-sm text-blue-600">⬇️</a>
                                 </td>
-                                <td class="p-3 text-center space-x-2">
-                                    <a href="edit_knowledge.php?id=<?= $doc['id'] ?>" class="text-yellow-600 hover:text-yellow-800 font-semibold">
+                                <td class="p-6 text-center ">
+                                    <a href="edit_knowledge.php?id=<?= $doc['id'] ?>" class='bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 text-sm'>
                                         แก้ไข
                                     </a>
-                                    <a href="delete_knowledge.php?id=<?= $doc['id'] ?>" onclick="return confirm('ยืนยันการลบเอกสารนี้?')" class="text-red-600 hover:text-red-800 font-semibold">
+                                    <a href="delete_knowledge.php?id=<?= $doc['id'] ?>" onclick="return confirm('ยืนยันการลบเอกสารนี้?')" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm">
                                         ลบ
                                     </a>
                                 </td>

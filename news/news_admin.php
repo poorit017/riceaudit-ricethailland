@@ -1,9 +1,9 @@
-<?php include "../config/config_news.php"; 
+<?php include "../config/config_news.php";
 session_start();
 if (!isset($_SESSION['admin_logged_in'])) {
     header("Location: ../login_admin.php");
     exit;
-}?>
+} ?>
 <!DOCTYPE html>
 <html lang="th">
 
@@ -17,7 +17,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
 <body class="bg-gray-100">
 
     <div class="max-w-6xl mx-auto p-6 bg-white shadow mt-8 rounded-lg">
-    <h1 class="text-3xl font-bold mb-6 text-center">🛠 จัดการประชาสัมพันธ์</h1>
+        <h1 class="text-3xl font-bold mb-6 text-center">🛠 จัดการประชาสัมพันธ์</h1>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_news"])) {
             $title = $_POST["title"];
@@ -66,8 +66,8 @@ if (!isset($_SESSION['admin_logged_in'])) {
                 if (file_exists($img['image_url'])) unlink($img['image_url']);
             }
 
-            $conn_news->query("DELETE FROM news_images WHERE news_id = $id");
-            $conn_news->query("DELETE FROM news WHERE id = $id");
+            $conn->query("DELETE FROM news_images WHERE news_id = $id");
+            $conn->query("DELETE FROM news WHERE id = $id");
 
             echo "<div class='bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4'>ลบข่าวเรียบร้อย</div>";
         }
@@ -102,6 +102,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
                         <th class="px-4 py-2 text-mid text-sm font-medium text-gray-600">หัวข้อ</th>
                         <th class="px-4 py-2 text-mid text-sm font-medium text-gray-600">ดู</th>
                         <th class="px-4 py-2 text-mid text-sm font-medium text-gray-600">วันที่</th>
+                        <th class="px-4 py-2 text-mid text-sm font-medium text-gray-600">แก้ไข</th>
                         <th class="px-4 py-2 text-mid text-sm font-medium text-gray-600">ลบ</th>
                     </tr>
                 </thead>
@@ -117,13 +118,18 @@ if (!isset($_SESSION['admin_logged_in'])) {
                            class='inline-block bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600 text-sm text-center'>
                            ดู
                         </a>
-                      </td>";                        echo "<td class='px-4 py-2 text-sm text-gray-600'>" . $row["created_at"] . "</td>";
+                      </td>";
+                        echo "<td class='px-4 py-2 text-sm text-gray-600'>" . $row["created_at"] . "</td>";
                         echo "<td class='px-4 py-2'>
-                            <form method='post' onsubmit=\"return confirm('ยืนยันการลบข่าวนี้?');\">
-                                <input type='hidden' name='news_id' value='" . $row["id"] . "'>
-                                <button type='submit' name='delete_news' class='bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm'>ลบ</button>
-                            </form>
-                          </td>";
+                        <a href='edit_news.php?id=" . $row["id"] . "' 
+                         class='bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 text-sm'>แก้ไข</a></td>
+                         <td class='px-4 py-2'>
+                         <form method='post' onsubmit=\"return confirm('ยืนยันการลบข่าวนี้?');\" style='display:inline;'>
+        <input type='hidden' name='news_id' value='" . $row["id"] . "'>
+        <button type='submit' name='delete_news' class='bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm'>ลบ</button>
+    </form>
+</td>";
+
                         echo "</tr>";
                     }
                     ?>
@@ -134,9 +140,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
         <div class="mt-6">
             <a href="../admin_panel.php" class="inline-block bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">← กลับไปหน้าแอดมิน</a>
         </div>
-
     </div>
-
 </body>
 
 </html>
